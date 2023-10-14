@@ -1,6 +1,5 @@
 package com.example.demo;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +14,6 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.io.IOException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -41,8 +39,8 @@ public class MainController implements Initializable {
         FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("AddView.fxml"));
         dialog.setScene(new Scene(loader.load(),600, 400));
         AddController controller = loader.getController();
-        controller.getdialog(dialog);
-        controller.getagreements(teachers);
+        controller.getDialog(dialog);
+        controller.getTeachers(teachers);
         dialog.showAndWait();
         table_view.setItems(FXCollections.observableList(teachers));
     }
@@ -67,9 +65,9 @@ public class MainController implements Initializable {
             FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("EditView.fxml"));
             stage.setScene(new Scene(loader.load(),600, 400));
             EditController controller = loader.getController();
-            controller.getdialog(stage);
+            controller.getDialog(stage);
             int id = teachers.indexOf(table_view.getSelectionModel().getSelectedItem());
-            controller.getagreeemet(teachers.get(id));
+            controller.getTeachers(teachers.get(id));
             stage.showAndWait();
             table_view.setItems(teachers);
             table_view.getSelectionModel().clearSelection();

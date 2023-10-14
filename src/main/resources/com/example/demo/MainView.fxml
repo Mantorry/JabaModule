@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -67,9 +67,9 @@
                         <TableColumn fx:id="column_posts" prefWidth="125.1839599609375" text="Должность" />
                     </columns>
                 </TableView>
-                <AnchorPane prefHeight="551.0" prefWidth="541.0">
+                <AnchorPane prefHeight="551.0" prefWidth="541.0" styleClass="background" stylesheets="@DarkTheme.css">
                     <children>
-                        <HBox layoutX="65.0" layoutY="309.0" prefHeight="28.0" prefWidth="247.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                        <HBox layoutX="65.0" layoutY="309.0" prefHeight="28.0" prefWidth="247.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
                             <children>
                                 <Button mnemonicParsing="false" onAction="#delete" text="Удалить" />
                                 <Button mnemonicParsing="false" onAction="#edit" text="Редактировать" />

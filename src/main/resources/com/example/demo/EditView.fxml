@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EditController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="620.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EditController">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="613.0" text="Редактирование преподавателя">
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="613.0" text="Редактирование данных">
             <font>
                 <Font size="24.0" />
             </font>
@@ -41,7 +41,7 @@
         <HBox alignment="CENTER" layoutX="10.0" layoutY="201.0" prefHeight="51.0" prefWidth="614.0">
             <children>
                 <Label prefHeight="22.0" prefWidth="170.0" text="Должность: " />
-                <TextField fx:id="text_posts" alignment="CENTER" prefHeight="27.0" prefWidth="250.0" promptText="Введите должность преподавателя" />
+                <TextField fx:id="text_posts" alignment="CENTER" prefHeight="27.0" prefWidth="278.0" promptText="Введите должность преподавателя" />
             </children>
         </HBox>
         <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="304.0" prefHeight="51.0" prefWidth="620.0">

@@ -17,7 +17,8 @@ public class EditController {
 
     @FXML
     void edit(ActionEvent event) {
-        if (!text_num.getText().isEmpty() && !text_faculty.getText().isEmpty() && !text_chair.getText().isEmpty() && !text_fio.getText().isEmpty() && !text_posts.getText().isEmpty()){
+        if (!text_num.getText().isEmpty() && !text_faculty.getText().isEmpty() && !text_chair.getText().isEmpty()
+                && !text_fio.getText().isEmpty() && !text_posts.getText().isEmpty()){
             teachers.setId(text_num.getText());
             teachers.setFaculties(text_faculty.getText());
             teachers.setChairs(text_chair.getText());
@@ -35,8 +36,8 @@ public class EditController {
 
     @FXML
     void cancel(ActionEvent event) {dialog.close();}
-    public void getdialog(Stage dialogStage) {this.dialog = dialogStage;}
-    public void getagreeemet(Teachers teachers) {
+    public void getDialog(Stage dialogStage) {this.dialog = dialogStage;}
+    public void getTeachers(Teachers teachers) {
         text_num.setText(teachers.getId());
         text_faculty.setText(teachers.getFaculties());
         text_chair.setText(teachers.getChairs());

@@ -35,15 +35,15 @@
         <HBox alignment="CENTER" layoutX="10.0" layoutY="149.0" prefHeight="51.0" prefWidth="614.0">
             <children>
                 <Label prefHeight="22.0" prefWidth="170.0" text="ФИО: " />
-                <TextField fx:id="text_fio" alignment="CENTER" prefHeight="27.0" prefWidth="250.0" promptText="Введите ФИО преподавателя" />
+                <TextField fx:id="text_fio" alignment="CENTER" prefHeight="27.0" prefWidth="250.0" promptText="Введите ФИО" />
             </children>
         </HBox>
-        <HBox alignment="CENTER" layoutX="10.0" layoutY="201.0" prefHeight="51.0" prefWidth="614.0">
-            <children>
-                <Label prefHeight="22.0" prefWidth="170.0" text="Должность: " />
-                <TextField fx:id="text_posts" alignment="CENTER" prefHeight="27.0" prefWidth="278.0" promptText="Введите должность преподавателя" />
-            </children>
-        </HBox>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="614.0">
+         <children>
+            <Label prefHeight="22.0" prefWidth="170.0" text="Должность: " />
+            <TextField fx:id="text_posts" alignment="CENTER" prefHeight="27.0" prefWidth="250.0" promptText="Введите должность" />
+         </children>
+      </HBox>
         <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="304.0" prefHeight="51.0" prefWidth="620.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#edit" prefHeight="33.0" prefWidth="150.0" text="Редактировать" />

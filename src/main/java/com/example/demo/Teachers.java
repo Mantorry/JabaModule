@@ -11,6 +11,10 @@ public class Teachers {
         this.posts = posts;
     }
 
+    public Teachers() {
+
+    }
+
     public String getId() {
         return id;
     }

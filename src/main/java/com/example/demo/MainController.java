@@ -116,10 +116,10 @@ public class MainController implements Initializable {
         try {
 
             JAXBContext context = JAXBContext
-                    .newInstance(PersonListWrapper.class);
+                    .newInstance(TeachersListWrapper.class);
             Unmarshaller um = context.createUnmarshaller();
             // Чтение XML из файла и демаршализация.
-            PersonListWrapper wrapper = (PersonListWrapper) um.unmarshal(file);
+            TeachersListWrapper wrapper = (TeachersListWrapper) um.unmarshal(file);
 
             teachers = FXCollections.observableList(wrapper.getTeachers());
             table_view.setItems(teachers);
@@ -140,12 +140,12 @@ public class MainController implements Initializable {
     public void savePersonDataToFile(File file) {
         try {
             JAXBContext context = JAXBContext
-                    .newInstance(PersonListWrapper.class);
+                    .newInstance(TeachersListWrapper.class);
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             // Обёртываем наши данные об преподавателях.
-            PersonListWrapper wrapper = new PersonListWrapper();
+            TeachersListWrapper wrapper = new TeachersListWrapper();
             wrapper.setTeachers(teachers);
 
             // Маршаллируем и сохраняем XML в файл.

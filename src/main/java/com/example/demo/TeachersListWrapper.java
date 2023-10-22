@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "teachers")
-public class PersonListWrapper {
+public class TeachersListWrapper {
 
     private List<Teachers> teachers;
 

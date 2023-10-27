@@ -14,7 +14,7 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 900, 700);
         MainController controller = fxmlLoader.getController();
         controller.getStage(stage);
-        stage.setTitle("Лабораторная 1.7");
+        stage.setTitle("Лабораторная 1.8");
         stage.getIcons().add(new Image(Objects.requireNonNull(MainApplication.class.getResourceAsStream("/com/example/demo/images/logo.png"))));
         stage.setScene(scene);
         stage.show();

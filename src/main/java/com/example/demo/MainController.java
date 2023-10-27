@@ -97,7 +97,7 @@ public class MainController implements Initializable {
         }
     }
 
-    public void setPersonFilePath(File file) {
+    public void setTeachersFilePath(File file) {
         Preferences prefs = Preferences.userNodeForPackage(MainApplication.class);
         if (file != null) {
             prefs.put("filePath", file.getPath());
@@ -112,7 +112,7 @@ public class MainController implements Initializable {
         }
     }
 
-    public void loadPersonDataFromFile(File file) {
+    public void loadTeachersDataFromFile(File file) {
         try {
 
             JAXBContext context = JAXBContext
@@ -125,7 +125,7 @@ public class MainController implements Initializable {
             table_view.setItems(teachers);
 
             // Сохраняем путь к файлу в реестре.
-            setPersonFilePath(file);
+            setTeachersFilePath(file);
 
         } catch (Exception e) { // catches ANY exception
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -137,7 +137,7 @@ public class MainController implements Initializable {
         }
     }
 
-    public void savePersonDataToFile(File file) {
+    public void saveTeachersDataToFile(File file) {
         try {
             JAXBContext context = JAXBContext
                     .newInstance(TeachersListWrapper.class);
@@ -152,7 +152,7 @@ public class MainController implements Initializable {
             m.marshal(wrapper, file);
 
             // Сохраняем путь к файлу в реестре.
-            setPersonFilePath(file);
+            setTeachersFilePath(file);
         } catch (Exception e) { // catches ANY exception
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Ошибка");
@@ -167,7 +167,7 @@ public class MainController implements Initializable {
     private void new_file(ActionEvent event) {
         teachers.clear();
         table_view.setItems(teachers);
-        setPersonFilePath(null);
+        setTeachersFilePath(null);
     }
 
     @FXML
@@ -183,7 +183,7 @@ public class MainController implements Initializable {
         File file = fileChooser.showOpenDialog(stage);
 
         if (file != null) {
-            loadPersonDataFromFile(file);
+            loadTeachersDataFromFile(file);
         }
     }
 
@@ -195,7 +195,7 @@ public class MainController implements Initializable {
     private void save_file(ActionEvent event) {
         File personFile = getTeachersFilePath();
         if (personFile != null) {
-            savePersonDataToFile(personFile);
+            saveTeachersDataToFile(personFile);
         } else {
             save_as_file(event);
         }
@@ -222,7 +222,7 @@ public class MainController implements Initializable {
             if (!file.getPath().endsWith(".xml")) {
                 file = new File(file.getPath() + ".xml");
             }
-            savePersonDataToFile(file);
+            saveTeachersDataToFile(file);
         }
     }
 

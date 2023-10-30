@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="demo">
+    <output-path>$PROJECT_DIR$/out/artifacts/demo</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.demo.MainApplication" />
+        <option name="description" value="" />
+        <option name="height" value="800" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="linuxIcon" value="$PROJECT_DIR$/src/main/resources/com/example/demo/images/logo.png" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/main/resources/com/example/demo/images/logo.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="Teachers" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1200" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="demo.jar">
+        <element id="module-output" name="demo" />
+      </element>
+    </root>
+  </artifact>
+</component>
